@@ -7,12 +7,17 @@
 </head>
 <body>
 
-	<p>The concept is simple. Use Firebase to enable xmlhttp requests. Use this endpoint: https://xhttp.firebaseio.com/requests.</p>
+	<p>The concept is simple. Use Firebase to enable xmlhttp requests. Use this endpoint: https://xhttp2.firebaseio.com/requests.</p>
+
+	<h1>Fetching Reddit</h1>
+
+	<div id="data"></div>
 
 	
 	<script>
-		Firexhttp.get("http://reddit.com", function(body){
-			console.log( body )
+		Firexhttp.get("http://reddit.com", function(resp){
+			console.log( resp )
+			document.querySelector('#data').innerHTML = resp.body
 		})
 		</script>
 
