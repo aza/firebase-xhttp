@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Firebase-XHTTP bridge</title>
+
+	<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+	<script type='text/javascript' src="firexhttp.js"></script>
+</head>
+<body>
+
+	<p>The concept is simple. Use Firebase to enable xmlhttp requests. Use this endpoint: https://xhttp.firebaseio.com/requests.</p>
+
+	
+	<script>
+		Firexhttp.get("http://reddit.com", function(body){
+			console.log( body )
+		})
+		</script>
+
+</body>
+</html>
